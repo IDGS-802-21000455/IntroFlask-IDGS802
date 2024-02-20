@@ -6,11 +6,14 @@
         Alumnos
     </h1>
 
-    <form action="/alumnos" method="POST">
-        
+    <form action="/alumnos" method="POST" novalidate>
+
+        <input type="hidden" name="csrf" id="{{csrf_token}}">
         {{macros.input_Form(form.nombre,class="form-control")}}
         {{macros.input_Form(form.amaterno,class="form-control")}}
         {{macros.input_Form(form.apaterno,class="form-control")}}
+        {{macros.input_Form(form.edad,class="form-control")}}
+        {{macros.input_Form(form.correo,class="form-control")}}
 
 <input type="submit" name="btn1">
 
